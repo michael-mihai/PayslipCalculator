@@ -12,7 +12,7 @@ A sample Web Api exercise project using .Net Core
 - assuming tax rates and brackets can change in time they are loaded from the configuration file (application.json) but in the absence of configuration the default values are used
 
 ## To run the project:
-- Either create a site in IIS and map to the Web.Api project folder 
+- Either create a site in IIS and map to the Web.Api project folder (see: https://docs.microsoft.com/en-us/aspnet/core/publishing/iis) 
 - Or  (using  IIS Express) from top menu select  > Debug > Start Debugging;
 
 ## To test with csv format data
