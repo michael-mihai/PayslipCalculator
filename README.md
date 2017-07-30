@@ -1,5 +1,5 @@
-# PayslipCalculator
-Just a test Web Api project
+# Payslip Calculator
+A sample Web Api exercise project using .Net Core
 
 ## Assumptions and implementation details:
 
