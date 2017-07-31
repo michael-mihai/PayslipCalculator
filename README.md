@@ -28,7 +28,7 @@ A sample Web Api exercise project using .Net Core
             Ryan,Chen,120000,10,01 March 2017
 			
 ## Generate documentation with SWAGGER :
-See:  http://<hostname-for-the-running-web-api>/swagger
+See:  "http://hostname-for-the-running-web-api/swagger"
  
 Note: For a better solution convert the Web Api to an AWS Lambda function 
 	
