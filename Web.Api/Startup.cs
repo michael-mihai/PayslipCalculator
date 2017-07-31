@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Net.Http.Headers;
+using Swashbuckle.AspNetCore.Swagger;
 using Web.Api.Extensions;
 using WebApiContrib.Core.Formatter.Csv;
 
@@ -44,6 +45,11 @@ namespace Web.Api
                 options.FormatterMappings.SetMediaTypeMappingForFormat("csv", MediaTypeHeaderValue.Parse("text/csv"));
             });
 
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Payslip Calculator", Version = "v1", TermsOfService = "None"});
+            });
+
             // dependency injection setup; TaxSettings are loaded from application.json
             services.AddSingleton<IPayslipService, PayslipService>();
             services.ConfigurePOCO<TaxSettings>(Configuration.GetSection("TaxSettings"));
@@ -57,6 +63,12 @@ namespace Web.Api
             loggerFactory.AddDebug();
 
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Payslip Calculator API V1");
+            });
         }
     }
 }

@@ -4,6 +4,9 @@ using Domain.Helpers;
 
 namespace Domain.Models
 {
+    /// <summary>
+    /// Holds payslip request data
+    /// </summary>
     public class PayslipRequest
     {
         [Required]

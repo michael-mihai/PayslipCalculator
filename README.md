@@ -26,7 +26,10 @@ A sample Web Api exercise project using .Net Core
 	    FirstName,LastName,AnnualSalary,SuperRate,PayStartPeriod
             Davi,Rudd,60050,9,01 March
             Ryan,Chen,120000,10,01 March 2017
-	
+			
+## Generate documentation with SWAGGER :
+See:  http://<hostname-for-the-running-web-api>/swagger
+ 
 Note: For a better solution convert the Web Api to an AWS Lambda function 
 	
 

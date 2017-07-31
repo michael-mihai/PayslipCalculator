@@ -16,6 +16,11 @@ namespace Web.Api.Controllers
             _payslipService = payslipService;
         }
 
+        /// <summary>
+        /// Calculate payslips for the submitted requests
+        /// </summary>
+        /// <param name="payslipRequests"></param>
+        /// <returns></returns>
         [HttpPost]
         [HttpPost("CalculatePayslips")]
         public IActionResult CalculatePayslips([FromBody] List<PayslipRequest> payslipRequests)
