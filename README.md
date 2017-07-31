@@ -17,12 +17,12 @@ A sample Web Api exercise project using .Net Core
 
 ## To test with csv format data
 ### Using Swagger:
-	-  navigate to URL: http://localhost:5000/swagger
+	- navigate to URL: http://localhost:5000/swagger
 	- expand operation: /api/payslip/calculatepayslip
 	- select the required Response Content Type (text/csv)
-	-  enter the posted data in the _Value_ field
+	- enter the posted data in the "Value" field
 	- select the corresponding content type for the post data 
-	- click *Try it out!* button
+	- click "Try it out!" button
 
 ### Using Postman :
 	- select method POST
