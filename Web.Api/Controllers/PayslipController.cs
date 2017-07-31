@@ -23,6 +23,7 @@ namespace Web.Api.Controllers
         /// <returns></returns>
         [HttpPost]
         [HttpPost("CalculatePayslips")]
+        [Produces("text/csv", new []{ "application/json" }, Type = typeof(List<PayslipResponse>) )]
         public IActionResult CalculatePayslips([FromBody] List<PayslipRequest> payslipRequests)
         {
             if (!ModelState.IsValid)

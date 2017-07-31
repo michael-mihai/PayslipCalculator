@@ -16,9 +16,17 @@ A sample Web Api exercise project using .Net Core
 - Or  (using  IIS Express) from top menu select  > Debug > Start Debugging;
 
 ## To test with csv format data
+### Using Swagger:
+	-  navigate to URL: http://localhost:5000/swagger
+	- expand operation: /api/payslip/calculatepayslip
+	- select the required Response Content Type (text/csv)
+	-  enter the posted data in the _Value_ field
+	- select the corresponding content type for the post data 
+	- click *Try it out!* button
+
 ### Using Postman :
 	- select method POST
-	- enter the URL: http://<hostname-for-the-running-web-api>/payslip/calculatepayslips
+	- enter the URL: http://localhost:5000/payslip/calculatepayslips
 	- under the Headers tab set the headers for csv: 
 	      Content-Type:  text/csv
 	      Accept: text/csv  
@@ -28,7 +36,7 @@ A sample Web Api exercise project using .Net Core
             Ryan,Chen,120000,10,01 March 2017
 			
 ## Generate documentation with SWAGGER :
-See:  "http://hostname-for-the-running-web-api/swagger"
+See:  "http://localhost:5000/swagger"
  
 Note: For a better solution convert the Web Api to an AWS Lambda function 
 	

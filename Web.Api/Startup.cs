@@ -47,7 +47,13 @@ namespace Web.Api
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Payslip Calculator", Version = "v1", TermsOfService = "None"});
+                c.SwaggerDoc("v1", new Info
+                {
+                    Title = "Payslip Calculator",
+                    Version = "v1",
+                    TermsOfService = "None",
+                    Description = "A simple API to calculate payslips based on configured tax brackets" 
+                });
             });
 
             // dependency injection setup; TaxSettings are loaded from application.json
